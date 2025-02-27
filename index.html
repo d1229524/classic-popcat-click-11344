@@ -65,7 +65,6 @@
         #p {
             background-image: url("imgs/p.png");
         }
-
         #op {
             background-image: url("imgs/op.png");
         }
@@ -79,6 +78,27 @@
     <img class="title" src="imgs/popcat.svg" alt="POPCAT">
     <div class="cat-img" id="p">0202</div>
 </div>
+
+<script>
+    let count = 0;
+    let p = document.getElementById('p');
+
+    function addCount() {
+        count+= 1;
+        }
+
+        document.addEventListener('mousedown', function() {
+            addCount();
+            p.innerText = count;
+
+            p.id = 'op';
+        });
+
+    document.addEventListener('mouseup', function() {
+        p.id = 'p';
+    });
+
+</script>
 
 </body>
 </html>
